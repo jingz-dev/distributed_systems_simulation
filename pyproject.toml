@@ -13,6 +13,8 @@ mesa = "^2.2.4"
 seaborn = "^0.13.2"
 networkx = "^3.2.1"
 usim = "^0.4.4"
+kubernetes = "^29.0.0"
+kazoo = "^2.10.0"
 
 
 [build-system]

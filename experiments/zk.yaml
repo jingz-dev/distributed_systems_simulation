@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zookeeper-deployment
+  namespace: zk
+  labels:
+    app: zookeeper
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: zookeeper
+  template:
+    metadata:
+      labels:
+        app: zookeeper
+    spec:
+      containers:
+      - name: zookeeper
+        image: zookeeper:latest
+        ports:
+        - containerPort: 2181
+        - containerPort: 2888
+        - containerPort: 3888
+        - containerPort: 8080
